@@ -10,10 +10,11 @@ const zomato = {
         // console.log('Starting the scraper..');
 
         browser = await puppeteer.launch({
-            headless: false
+            headless: true
         })
         
         page = await browser.newPage();
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
         page.on('console', message => {
             // console.log(`Message from puppeteer: ${message.text()}`);
         })

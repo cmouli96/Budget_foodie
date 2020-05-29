@@ -7,8 +7,9 @@ const restrntInfo = {
                 {
 
                                 let url = "https://www.swiggy.com";
-                                browser = await puppeteer.launch({headless : false});
+                                browser = await puppeteer.launch({headless : true});
                                 page = await browser.newPage();
+                                await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
                                 //page.setDefaultNavigationTimeout(0); 
                                 await page.goto(url, { waitUntil: "networkidle2" });
                                 await page.type('#location', location);
