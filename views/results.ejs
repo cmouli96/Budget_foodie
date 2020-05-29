@@ -1,0 +1,17 @@
+<h1>
+	Results Page
+</h1>
+
+<ul>
+	<% data["location_suggestions"].forEach(function(location_suggestion){ %>
+	<li>
+		<Strong>
+			<%= location_suggestion["id"]%> 
+		</Strong>
+			- <%=location_suggestion["name"] %>
+	</li>
+<% }) %>
+	
+</ul>
+
+<a href="/"> Search Again!</a>

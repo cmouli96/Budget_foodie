@@ -1,0 +1,29 @@
+<h1>
+	Nearby Restaurent Details of This Location
+</h1>
+
+<!-- <ul>
+	<% data["nearby_res"].forEach(function(nearby_res){ %>
+	<li>
+		<Strong>
+			<%= nearby_res%> 
+		</Strong>
+			<!-- - <%=nearby_res["entity_type"] %>
+			- <%=nearby_res["entity_id"] %> -->
+	</li>
+<!--
+<% }) %> -->
+	
+	<ul>
+	<% data["best_rated_restaurant"].forEach(function(best_rated_restaurant){ %>
+	<li>
+		<Strong>
+			<a href= '<%=best_rated_restaurant["restaurant"]["url"]+"/order"%>' >restaurent url</a> 
+		</Strong>
+			
+	</li>
+<% }) %>
+	
+</ul>
+
+<a href="/"> Search Again with location!</a>

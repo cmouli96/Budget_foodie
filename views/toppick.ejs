@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <style>
+                    /* html { 
+                        background: url(images/food3.gif) no-repeat center center fixed; 
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    } */
+
+                    .topdiv
+                    {
+                        padding : 2%;
+                        padding-bottom: 2%;
+                        margin-bottom: 2%;
+                        align-content :left;
+                        background-color :white;
+                    }
+                    #maindiv
+                    {
+                      margin-left: 5%;
+                      margin-right: 5%;
+                      margin-top: 7%;
+                    }
+                    .icon 
+                    {
+                      background: url('images/icon.jpg');
+                      height: 20px;
+                      width: 20px;
+                      display: block;
+                      
+                    }
+                    #table
+                    { 
+                      display: table; 
+                    }
+                    .tr
+                    { 
+                      display: table-row; 
+                    }
+                    .td
+                    { 
+                      display: table-cell; 
+                    }
+          </style>
+         <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- for icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Compiled and minified JavaScript -->
+        <script>
+          $(document).ready(function(){
+            $('.sidenav-trigger').sidenav();
+          });
+        </script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+        
+
+
+
+    </head>
+    <body>
+
+      <nav>
+        <div class="nav-wrapper" style = "background-color: white;">
+          <div class="brand-logo" id = "table">
+            <div class = "tr">
+                <img src="images/icon.jpg" height="40px" width="40px" class = "td">
+                <h3 style = "color : #05b033;" class = "td"> buDgEtFoODie</h3>
+            </div>
+          </div>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black">menu</i></a>
+          <ul class="right hide-on-med-and-down" >
+            <li><a href="/" style="color:black;">Home</a></li>
+            <li><a href="badges.html" style="color:black;">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo" style="color:black;">
+        <li><a href="/" style="color:black;">Home</a></li>
+        <li><a href="badges.html" style="color:black;">About</a></li>
+      </ul>
+      
+      
+
+            <!-- <div class = "topdiv" id = "table">
+              <div class = "tr">
+                  <img src="images/icon.jpg" height="40px" width="40px" class = "td">
+                  <h4 style = "color : #05b033;" class = "td"> buDgEtFoODie</h4>
+              </div>
+            </div> -->
+
+<div id = "maindiv">     
+        <div class="row">
+            <% var rest = 0 %>
+            <% for(var i = 0; i < restrant.length; i++) { %>
+              <% rest = i%5; %>
+            <div class="col s12 m6 l4">
+              <div class="card medium darken-1">
+                <div class="card-image">
+                    <img src="images/rest<%= rest %>.jpeg">
+                  <h3><span class="card-title black-text">
+                      <blockquote class="white">
+                       <i class="material-icons small">restaurant</i>     
+                         <b>     <%= restrant[i].restaurantName %> </b>
+                      </blockquote>
+                    </span></h3>
+                </div>
+                <div class="card-content">
+                  <p> <%= restrant[i].tag %>  </p>
+                  <p><i class="material-icons tiny">star </i> <%= restrant[i].rating %>  </p>
+                </div>
+                <div class="card-action">
+                  <a href="/items?sgylink=<%= restrant[i].sgylink %>&ztolink=<%= restrant[i].ztolink %>" > visit </a>
+                </div>
+              </div>
+            </div>
+            <% } %>
+        </div>
+
+</div>>
+    </body>
+</html> 
+
+

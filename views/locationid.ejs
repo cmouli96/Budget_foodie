@@ -1,0 +1,18 @@
+<h1>
+	The location details
+</h1>
+
+<ul>
+	<% data["location_suggestions"].forEach(function(location_suggestion){ %>
+	<li>
+		<Strong>
+			<%= location_suggestion["title"]%> 
+		</Strong>
+			- <%=location_suggestion["entity_type"] %>
+			- <%=location_suggestion["entity_id"] %>
+	</li>
+<% }) %>
+	
+</ul>
+
+<a href="/"> Search Again with location!</a>

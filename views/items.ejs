@@ -1,0 +1,127 @@
+
+<style>
+  .rest
+  {
+    background-color: black;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    size: 2%;
+    color: white;
+    line-height: 0.1;
+  }
+  .rating
+  {
+    display: inline-block;
+  }
+  .r
+  {
+    width: 10%;
+  }
+  .item
+  {
+      padding: 0;
+      background-color:white;
+      align-content: space-around;
+      color: black;
+
+  }
+  .id
+  {
+    color: black;
+    background-color: white;
+  }
+  .Add
+  {
+    color: green;
+    background-color: white;
+  }
+  .Remove
+  {
+    color:green;
+    background-color: white;
+  }
+  body
+  {
+    background-color: white;
+  }
+  .ztoLink
+  {
+    background-color: white;
+    color: white;
+  }
+  .sgyLink
+  {
+    background-color: white;
+    color: white;
+  }
+  .ztoPrice
+  {
+    color: white;
+  }
+  .sgyPrice
+  {
+    color: white;
+  }
+  .click
+  {
+    background-color: green;
+    color: white;
+  }
+  div{
+    display: block;
+  }
+</style>
+
+<body class="body">
+<!-- <button class="Order">Order Now</button> -->
+<!-- <a href="/campgrounds">View All Campgrounds</a> -->
+<!-- <a href="<%= restaurant["zomatoLink"] %>">Order Now </a> -->
+<div class="rest">
+  <h1> <%= restaurant["restaurantName"]%></h1>
+  <h6><%= restaurant["tag"]%></h6>
+  <h6><%= restaurant["address"]%></h6>
+  <div class="rating">
+    <span class="r">
+      <%= restaurant["rating"]  -%>
+    </span>
+    <span>
+      <%= restaurant["peopleRated"] %>
+    </span>
+  </div>
+ 
+</div>
+
+<p class="ztoLink">
+  <%= restaurant["zomatoLink"] %>
+</p>
+<p class="sgyLink">
+ <%= restaurant["swiggyLink"] %>
+</p>
+<%= restaurant["items"].length%> <span>ITEMS</span>
+<!-- <a href="/toppick">GoBack!!</a> -->
+    <ul>
+      <% restaurant["items"].forEach(function(item){ %>
+      <div class="id">
+        <Strong class="item">
+          <%= item["itemName"] %>
+         </Strong>
+         <button class="Add">Add</button>
+            <button class="Remove">Remove</button>
+            <p class="ztoPrice">
+              <%=  item["ztoPrice"] %>
+            </p>
+            <p class="sgyPrice">
+              <%= item["sgyPrice"] %>
+            </p>  
+
+       </div>   
+    <% }) %>
+    </ul>
+
+</body>
+<body>
+  <button class="click">Order Now</button>
+</body>
+<script type="text/javascript" src="/items.js"></script>
+
