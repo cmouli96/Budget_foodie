@@ -22,7 +22,7 @@ describe("Server", () => {
             expect(data).toBe(200);
         });
     });
-});
+
 
    // describe("SWIGGY", () => {
      //  var data;
