@@ -22,22 +22,23 @@ describe("Server", () => {
             expect(data).toBe(200);
         });
     });
+});
 
-    describe("SWIGGY", () => {
-       var data;
-       var keys;
-        beforeAll(async (done) => {
-               await swiggy.initialize("banglore");
-                data = await swiggy.retrieve("https://www.swiggy.com/restaurants/rolls-on-wheels-woods-street-central-bangalore-bangalore-9103");
-                keys = Object.keys(data);
+   // describe("SWIGGY", () => {
+     //  var data;
+       //var keys;
+       // beforeAll(async (done) => {
+         //      await swiggy.initialize("banglore");
+           //     data = await swiggy.retrieve("https://www.swiggy.com/restaurants/rolls-on-wheels-woods-street-central-bangalore-bangalore-9103");
+             //   keys = Object.keys(data);
                 
-                done();
+               // done();
                 
-        }, 50000);
-        it("description of single item of a restaurant", () => {
-            expect(keys).toEqual(["restaurantName","tag", "address", "rating", "peopleRated", "weblink", "items"]);
-        });
-    });
+        //}, 50000);
+        //it("description of single item of a restaurant", () => {
+         //   expect(keys).toEqual(["restaurantName","tag", "address", "rating", "peopleRated", "weblink", "items"]);
+        //});
+    //});
    
     // describe("GET /test", () => {
     //     var data = {};
